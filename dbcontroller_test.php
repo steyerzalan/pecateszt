@@ -16,6 +16,25 @@ else
 {
     echo "Az adatbázis kapcsolat sikerTELEN!<br>";
 }
+//Tesztelük az SQl lekérdezéshez tartozó függvényt
+$query = "Select * FROM fishingrod";
+$result = $db->executeSelectQuery($query);
 
+if($result!== "hiba") 
+{
+    echo "Lekérdezés sikeres!<br>";
+    echo "<pre>";
+    print_r($result);
+    echo "</pre>";
+}
+else
+{
+    echo "Lekérdezés sikerTELEN!<br>";
+}
 
+//Teszteljük a lezárást
+$db->closeDB();
+echo "Lezárva az adatbázis! <br>";
+
+$result = $db->executeSelectQuery($query);
 ?>
