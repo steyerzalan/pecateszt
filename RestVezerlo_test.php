@@ -1,7 +1,7 @@
 <?php
 require_once("RestVezerlo.php");
 //Teszt: Összes Horgászbot lekérdezése
-$FishingRodrest= new $fishingRodRestKezelo();
+$FishingRodrest= new FishingRodrestKezelo();
 echo "Összes horgászbot lekérdezése: ";
 $_GET["view"] ="all";
 $FishingRodrest->getAllFRod();
@@ -34,4 +34,7 @@ echo "\n";
 //Teszt: hibás kérés
 $_GET["view"]="invalid"; //nem létező view
 $FishingRodrest->getFault();
+
+//Tesztelés valahogy így:
+//index.php?view=all
 ?>
