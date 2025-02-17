@@ -1,0 +1,1 @@
+dbcontroller: adatbázis kapcsolatért, lekérdezésekért felel
